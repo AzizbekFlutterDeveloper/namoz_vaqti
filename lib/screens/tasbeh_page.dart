@@ -10,6 +10,10 @@ class TasbehPage extends StatefulWidget {
 }
 
 class _TasbehPageState extends State<TasbehPage> {
+  
+  
+  
+
   int _index = 0;
   @override
   Widget build(BuildContext context) {
@@ -102,6 +106,7 @@ class _TasbehPageState extends State<TasbehPage> {
                     onTap: (){
                       setState(() {
                         _index += 1;
+                       
                       });
                     },
                     onLongPress: (){

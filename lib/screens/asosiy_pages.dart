@@ -403,7 +403,8 @@ class _AsossiyPageState extends State<AsossiyPage> {
     int quyoshS = int.parse(quyosh.split(":")[0]);
     int quyoshM = int.parse(quyosh.split(":")[1]);
     b(NewsApiService.day, quyoshS, quyoshM, "Bomdod",quyosh);
-
+    
+    
     
   }
   

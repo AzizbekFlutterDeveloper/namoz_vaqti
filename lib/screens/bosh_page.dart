@@ -233,38 +233,86 @@ class _BoshPageState extends State<BoshPage> {
     int huftonS = int.parse(hufton.split(":")[0]);
     int huftonM = int.parse(hufton.split(":")[1]);
 
-    if (hour >= huftonS && min >= huftonM) {
-      names = "Hufton";
-      nameTime = hufton;
-      namesNext = "Bomdod";
-      nameTimeNext = bomdod;
-      rasm = image[5];
-    } else if (hour >= shomS && min >= shomM) {
-      print("object");
-      names = "Shom";
-      nameTime = shom;
-      rasm = image[4];
-      namesNext = "Hufton";
-      nameTimeNext = hufton;
-    } else if (hour >= asrS && min >= asrM) {
-      names = "Asr";
-      print(shomS);
-      nameTime = asr;
-      rasm = image[3];
-      namesNext = "Shom";
-      nameTimeNext = shom;
-    } else if (hour >= peshinS && min >= peshinM) {
-      names = "Peshin";
-      nameTime = peshin;
-      rasm = image[2];
-      namesNext = "Asr";
-      nameTimeNext = asr;
-    } else if (hour >= bomdodS && min >= bomdodM) {
-      names = "Bomdod";
-      nameTime = bomdod;
-      rasm = image[0];
-      namesNext = "Peshin";
-      nameTimeNext = peshin;
+    if (hour >= huftonS) {
+      if(hour == huftonS){
+        if(min >= huftonM){
+          names = "Hufton";
+          nameTime = hufton;
+          namesNext = "Bomdod";
+          nameTimeNext = bomdod;
+          rasm = image[5];
+        }
+      }else{
+        names = "Hufton";
+        nameTime = hufton;
+        namesNext = "Bomdod";
+        nameTimeNext = bomdod;
+        rasm = image[5];
+      }
+    }else if (hour >= shomS) {
+      if(hour == shomS){
+        if(min >= shomM){
+          names = "Shom";
+          nameTime = shom;
+          rasm = image[4];
+          namesNext = "Hufton";
+          nameTimeNext = hufton;
+        }
+      }else{
+        names = "Shom";
+        nameTime = shom;
+        rasm = image[4];
+        namesNext = "Hufton";
+        nameTimeNext = hufton;
+      }
+    }else if (hour >= asrS) {
+      if(hour == asrS){
+        if(min >= asrM){
+          names = "Asr";
+          nameTime = asr;
+          rasm = image[3];
+          namesNext = "Shom";
+          nameTimeNext = shom;
+        }
+      }else{
+        names = "Asr";
+        nameTime = asr;
+        rasm = image[3];
+        namesNext = "Shom";
+        nameTimeNext = shom;
+      }
+    }else if (hour >= peshinS) {
+      if(hour == peshinS){
+        if(min >= peshinM){
+          names = "Peshin";
+          nameTime = peshin;
+          rasm = image[2];
+          namesNext = "Asr";
+          nameTimeNext = asr;
+        }
+      }else{
+        names = "Peshin";
+        nameTime = peshin;
+        rasm = image[2];
+        namesNext = "Asr";
+        nameTimeNext = asr;
+      }
+    }else if (hour >= bomdodS) {
+      if(hour == bomdodS){
+        if(min >= bomdodM){
+          names = "Bomdod";
+          nameTime = bomdod;
+          rasm = image[0];
+          namesNext = "Peshin";
+          nameTimeNext = peshin;
+        }
+      }else{
+        names = "Bomdod";
+        nameTime = bomdod;
+        rasm = image[0];
+        namesNext = "Peshin";
+        nameTimeNext = peshin;
+      }
     }
   }
 }
